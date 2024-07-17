@@ -8,47 +8,33 @@
   <script src="main.js"></script>
  </head>
  <body>
-    <noscript>
-        <div style="padding: 4px 16px; background-color: #E84B35; text-align: center; color: white;">
-          JavaScriptを有効に設定してからご利用ください
-        </div>
-    </noscript>
-    <input type="hidden" id="user_id" name="user_id" value="abcdefghij" />
-     <div id="synergy-nform-loading" class="synergy-nform-loading" style="background-color: #E5E5E5; line-height: 1.7; color: #2C3E50; text-align: center; padding: 64px 24px; height: 100%;">
-        <div class="synergy-nform-loading__icon" style="width: 64px; margin: auto;">
-          <svg style="width: 64px; height: 64px; fill: #BCC4C8; animation: synergy-nform-loading-spin 2s infinite linear;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
-        </div>
-     </div>
-     <script>
-        var style = document.createElement('style');
-        style.textContent = '@keyframes synergy-nform-loading-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(359deg); } }';
-        document.head.appendChild(style);
-      
-        function showErrorMessage() {
-          const appendNode = function(div) {
-              const tgtNode = document.getElementById("synergy-nform-loading");
-              tgtNode.parentNode.insertBefore(div, tgtNode);
-          };
-      
-          const div = document.createElement('div');
-          div.style.cssText = "padding: 4px 16px; background-color: #E84B35; text-align: center; color: white;";
-          div.innerHTML = "フォームの動作に必要な情報の取得に失敗しました。"
-                             + "<br>しばらく時間をあけてから再度アクセスしてください。"
-                             + "<br>広告ブロック機能等を利用している場合は解除してアクセスしてください。";
-      
-          document.readyState === 'loading'
-            ? document.addEventListener("DOMContentLoaded", () => appendNode(div))
-            : appendNode(div);
-        }
-     </script>
-     <div
-              id="synergy-nform-root"
-              class="synergy-nform-root"
-              data-schema="nfnb"
-              data-asset-origin="https://assets.s.msgs.jp"
-              data-api-origin="https://nfnb.f.msgs.jp"
-              data-api-url="https://nfnb.f.msgs.jp/n/form/s/v1/nfnb/forms/vdDNFQM5fPrbEHrEuuTC8"
-     ></div>
-     <script src="https://assets.s.msgs.jp/n/form/js/synergy-embedded-form-loader.js" onerror="showErrorMessage();"></script>
+<form action="https://nfnb.f.msgs.jp/webapp/form/26507_nfnb_1/m_setParameters.do" method="post">
+お問い合わせ項目<span class="icn-req-nodisp-err">必須</span><br>
+<select name="singleAnswer(ANSWER1)"><option value="3">アカウント情報の削除</option><option value="6">プライバシー侵害、なりすまし、知的財産権の侵害について</option><option value="4">個人情報に関して</option><option value="5">その他</option></select><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+メールアドレスアカウント登録時のメールアドレスをご入力ください。本人確認に利用します。<br>
+<input type="text" istyle="3" mode="alphabet" name="singleAnswer(ANSWER4)" size="14"><br />（確認のため再入力）<br />
+<input type="text" istyle="3" mode="alphabet" name="singleAnswer(ANSWER4-R)" size="14"><br>
+<br>
+お問い合わせ本文<span class="icn-req-nodisp-err">必須</span><br>
+<textarea cols="40" rows="5" name="singleAnswer(ANSWER5)"></textarea><br>
+<br>
+プライバシーポリシーへの同意<br>
+<label><input type="checkbox" name="multiAnswer(ANSWER6)" value="1"/>同意する</label> <br>
+<br>
+ 
+<input type="hidden" id="user_id" name="user_id" value="abcdefghij" />
+
+<input type="submit" value="　送　信　">
+<br />
+<input type="reset" value="　クリア　">
+</form>
+
  </body>
 </html>
